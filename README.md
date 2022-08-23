@@ -23,16 +23,9 @@ The application it's avaible to search a city and bring a list with all restaura
 
 ## Structure:
 
-sads    sdad    d
-¸¸¸sad.
-¸¸¸.
-¸¸¸¸¸¸¸¸¸
-kh
-.    asd
-﻿﻿﻿﻿w﻿﻿e
 
-Root
-└────┤ App.js          *(Starting file)*
+     Root
+     ┤ App.js          *(Starting file)*
      │ navigation.js   *(Select the different screens)*
      │ Screens/ 
      │ └───────┤ Home.js               *(Initial component page)*
@@ -83,36 +76,36 @@ Initiate RootNavigation component.
 
 Link all pages together.
 
-  Initiate:
-    - redux storage with configureStore (redux/store.js).
-    - navigator stacks where save pages history.
+Initiate:
+  - redux storage with configureStore (redux/store.js).
+  - navigator stacks where save pages history.
 
-    headerShown is disabled (false) to avoid show the page name on the top.
+headerShown is disabled (false) to avoid show the page name on the top.
 
-  Link all pages inside of Redux and navigator components:
-    - Home
-    - DetailsRestaurant
-    - OrderCompleted
+Link all pages inside of Redux and navigator components:
+  - Home
+  - DetailsRestaurant
+  - OrderCompleted
 
 
 ### Home.js:
 
 Render the main screen.
 
-  Initiate:
-    - useStates restaurantData: To save & use all restaurants and business received by the API Yelp. By default use LocalRestaurant list.
-    - useStates city: To save & use the value of the city to request business information with Yelp API. By default "New York".
-    - useStates activeTab: To save & use the configuration choice about "Delivery" or "Pickup". By default "Delivery".
+Initiate:
+  - useStates restaurantData: To save & use all restaurants and business received by the API Yelp. By default use LocalRestaurant list.
+  - useStates city: To save & use the value of the city to request business information with Yelp API. By default "New York".
+  - useStates activeTab: To save & use the configuration choice about "Delivery" or "Pickup". By default "Delivery".
 
   Configure useEffects to update the list of restaurants with getRestaurantsFromYelp when is any change in city or activeTab useStates.
 
-  The render is made up with:
-    - HeaderTabs
-    - SearchBar
-    - Categories
-    - RestaurantItems
-    - DividerLine
-    - BottonTabs
+The render is made up with:
+  - HeaderTabs
+  - SearchBar
+  - Categories
+  - RestaurantItems
+  - DividerLine
+  - BottonTabs
 
   A scroll is enabled to Categories and RestaurantItems.
 
@@ -121,33 +114,33 @@ Render the main screen.
 
 Render the restaurant details and product options menu.
 
-  Initiate
-    - Windowheight: Get the windows size and is used to adapt the scroll and don't lose any item.
+Initiate
+  - Windowheight: Get the windows size and is used to adapt the scroll and don't lose any item.
 
-  The render is made up with:
-    - About
-    - DividerLine
-    - MenuItems
-    - ViewCart
+The render is made up with:
+  - About
+  - DividerLine
+  - MenuItems
+  - ViewCart
 
 
 ### OrderCompleted.js:
 
 Render the paged showed after ordering.
 
-  Initiate
-    - Windowheigh (double): Get the windows size and is used to adapt the scroll and don't lose any item.
-    - useState lastOrder: To save & use all orders done.
-    - useSelector: to save the state of the menu items and the restaurant name selecteds between pages.
-    - total (double): Where make a plus of all item places selected without "$" symbol.
-    - totalUSD (string): reduce total to 2 decimals and add "$" symbol.
+Initiate
+  - Windowheigh (double): Get the windows size and is used to adapt the scroll and don't lose any item.
+  - useState lastOrder: To save & use all orders done.
+  - useSelector: to save the state of the menu items and the restaurant name selecteds between pages.
+  - total (double): Where make a plus of all item places selected without "$" symbol.
+  - totalUSD (string): reduce total to 2 decimals and add "$" symbol.
 
   Configure useEffect to get the last data (orders) saved from DB. Create a object with the information and is set in lastOrder state. Must be called 1 time when the component OrderCompleted is accesed.
 
-  The render is made up with:
-    - LottieView (check-mark animation)
-    - MenuItems
-    - LottieView (cooking animation)
+The render is made up with:
+  - LottieView (check-mark animation)
+  - MenuItems
+  - LottieView (cooking animation)
 
   A scroll is enabled to MenuItems and the last LottieView.
 
@@ -156,18 +149,18 @@ Render the paged showed after ordering.
 
 Configure firebase connection.
 
-  Initiate if it is not initiate before.
+Initiate if it is not initiate before.
 
 
 ### restaurantFromYelp.js:
 
 Make and get request from Yelp API.
 
-  Initiate:
+Initiate:
   - apiOptions: Header to api request wiith the key.
   - yelpUrl: the GET request.
 
-  Return a list of restaurants which is filtered with activeTab state.
+Return a list of restaurants which is filtered with activeTab state.
 
   
 ###  BottonTabs.js:
@@ -225,21 +218,21 @@ Render the description of RestaurantDetail.
 
 Render the list of items with name, price and image.
 
-  Initiate:
-    - dispatch: To use the reducer.
-    - selectedItem (function): To save a item in the cart with reducer.
-    - cartItem (function): To take the state (items) of the reducer.
-    - isFoodInCart (function): To check if an Item is in the reducer state.
+Initiate:
+  - dispatch: To use the reducer.
+  - selectedItem (function): To save a item in the cart with reducer.
+  - cartItem (function): To take the state (items) of the reducer.
+  - isFoodInCart (function): To check if an Item is in the reducer state.
 
-  FoodInfo: Render detailed information of an item.
+FoodInfo: Render detailed information of an item.
 
-  FoodImage: Render the image item.
+FoodImage: Render the image item.
 
-  The render is made up with:
-    - BouncyCheckBox
-    - DividerLine
+The render is made up with:
+  - BouncyCheckBox
+  - DividerLine
 
-  All render is inside of a Scroll.
+All render is inside of a Scroll.
 
 
 ### OrderItem.js:
@@ -251,22 +244,22 @@ Render a single item with only the title and the price
 
 Render the ViewCart button and when is pressed, disable this button and render the order list and the checkout button.
 
-  Initiate:
-    - modalVIsible useState: To manage the visibility state of the render components.
-    - loading useState: To manage the loading animation.
-    - useSelector: to save the state of the menu items and the restaurant name selecteds between pages.
-    - total (double): Where make a plus of all item places selected without "$" symbol.
-    - totalUSD (string): reduce total to 2 decimals and add "$" symbol.
+Initiate:
+  - modalVIsible useState: To manage the visibility state of the render components.
+  - loading useState: To manage the loading animation.
+  - useSelector: to save the state of the menu items and the restaurant name selecteds between pages.
+  - total (double): Where make a plus of all item places selected without "$" symbol.
+  - totalUSD (string): reduce total to 2 decimals and add "$" symbol.
 
-  checkoutModalContent: Render the order list with a list of items in the cart, and the CheckOut button.
+checkoutModalContent: Render the order list with a list of items in the cart, and the CheckOut button.
 
-  The render is made up with:
-    - OrderItem
-    - CheckOutButton
-    - ViewCartButton
-    - LoadingScreen
+The render is made up with:
+  - OrderItem
+  - CheckOutButton
+  - ViewCartButton
+  - LoadingScreen
 
-  OrderItem it's in a scroll.
+OrderItem it's in a scroll.
 
 
 ### addOrderToFireBase.js:
@@ -286,14 +279,14 @@ Save in orders database in firebase the items, and render loading animation.
 
 Render CheckOut button.
 
-  Initiate:
-    - dispatch: To use the reducer.
-    - cleanCart (function): To remove all (items) from the reducer state.
+Initiate:
+  - dispatch: To use the reducer.
+  - cleanCart (function): To remove all (items) from the reducer state.
 
-  When the button is pressed:
-    - Save items in the database with addOrderToFireBase.
-    - Clean the reducer state with cleanCart.
-    - Set the state of ModalVisible in false, to disable the orderlist and checkout button.
+When the button is pressed:
+  - Save items in the database with addOrderToFireBase.
+  - Clean the reducer state with cleanCart.
+  - Set the state of ModalVisible in false, to disable the orderlist and checkout button.
 
 
 ### LoadingScreen.js:
@@ -305,18 +298,18 @@ Rennder a LottieView with the scanner animation, to show loading action to users
 
 Render ViewCart button.
 
-  When the button is pressed:
-    - Set the state of ModalVisible in true, to disable the ViewCart button, and enable the orderlist and checkout button.
+When the button is pressed:
+  - Set the state of ModalVisible in true, to disable the ViewCart button, and enable the orderlist and checkout button.
 
 
 ### DividerLine.js:
 
 Render a separation line.
 
-  The component allow manage:
-    - color (string): Change the color line. #ddd (grey) by default.
-    - width (number): The line width. 1 by default.
-    - margin (number): The horizontal margin. 0 by default.
+The component allow manage:
+  - color (string): Change the color line. #ddd (grey) by default.
+  - width (number): The line width. 1 by default.
+  - margin (number): The horizontal margin. 0 by default.
 
 
 ### cartReducer.js:
@@ -343,9 +336,9 @@ Manage the state with all items selected between app pages.
 
 Create and configure the reducer.
 
-  Initiate: 
-    - reducers: Create a reducer with cartReducer.js
-    - rootReducer: Configure the different reducers.
+Initiate: 
+  - reducers: Create a reducer with cartReducer.js
+  - rootReducer: Configure the different reducers.
 
 
 ### configureStore.js:
