@@ -24,7 +24,10 @@ The application it's avaible to search a city and bring a list with all restaura
 ## Structure:
 
 sads    sdad    d
-....sad
+¸¸¸sad.
+¸¸¸.
+¸¸¸¸¸¸¸¸¸
+kh
 .    asd
 ﻿﻿﻿﻿w﻿﻿e
 
