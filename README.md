@@ -23,45 +23,50 @@ The application it's avaible to search a city and bring a list with all restaura
 
 ## Structure:
 
+sads    sdad    d
+....sad
+.    asd
+﻿﻿﻿﻿w﻿﻿e
+
 Root
- └────┤ App.js          *(Starting file)*
-      │ navigation.js   *(Select the different screens)*
-      │ Screens/ 
-      │ └───────┤ Home.js               *(Initial component page)*
-      │         │ RestaurantDetails.js  *(Restaurant page)*
-      │         │ OrderCompleted.js     *(After order page)*
-      │
-      │ Components/
-      │ └──────────┤ api/
-      │            │ └─────┤ restaurantFromYelp.js  *(YELP Api config)*     
-      │            │       │ firebase.js            *(Configuration to conect with firebase DB)*
-      │            │             
-      │            │ home/
-      │            │ └─────┤ BottomTabs.js    *(Options bar: home, browser, grocery, Orders, Account)*
-      │            │       │ Categories.js    *(Options bar: categories or types of business)*
-      │            │       │ HeaderTabs.js    *(Option bar: Delivery or Pickup)*
-      │            │       │ RestaurantItems.js   *(Restaurants options displayed)*
-      │            │       │ SearchBar.js         *(Search bar)*
-      │            │       
-      │            │ restaurantDetails/
-      │            │ └─────────────────┤ About.js       *(Header with restaurant information)*
-      │            │                   │ MenuItems.js   *(Menu options list)*
-      │            │                   │ OrderItem.js   *(Item name and price to order list)*
-      │            │                   │ ViewCart.js    *(Order list and buttons)*
-      │            │                   │ viewCart/
-      │            │                   │ └────────┤ addOrderToFireBase.js *(Save order in BackEnd DB)*
-      │            │                   │          │ CheckOutButton.js     *(Button to check out)*
-      │            │                   │          │ LoadingScreen.js   *(Loading animation)*
-      │            │                   │          │ ViewCartButton    *(BUtton to view cart)*
-      │            │                   
-      │            │ DividerLine.js    *(Component to draw a line)*
-      │ redux/  
-      │ └──────┤ store.js     *(Redux store)*
-      │        │ reducers/             
-      │          └────────┤ cartReducer.js  *(Reducer)*
-      │                   │ index.js    *(Reducer configuration)*
-      │
-      │ assets/    *(Any other resource such images, animations or list)*
+└────┤ App.js          *(Starting file)*
+     │ navigation.js   *(Select the different screens)*
+     │ Screens/ 
+     │ └───────┤ Home.js               *(Initial component page)*
+     │         │ RestaurantDetails.js  *(Restaurant page)*
+     │         │ OrderCompleted.js     *(After order page)*
+     │
+     │ Components/
+     │ └──────────┤ api/
+     │            │ └─────┤ restaurantFromYelp.js  *(YELP Api config)*     
+     │            │       │ firebase.js            *(Configuration to conect with firebase DB)*
+     │            │             
+     │            │ home/
+     │            │ └─────┤ BottomTabs.js    *(Options bar: home, browser, grocery, Orders, Account)*
+     │            │       │ Categories.js    *(Options bar: categories or types of business)*
+     │            │       │ HeaderTabs.js    *(Option bar: Delivery or Pickup)*
+     │            │       │ RestaurantItems.js   *(Restaurants options displayed)*
+     │            │       │ SearchBar.js         *(Search bar)*
+     │            │       
+     │            │ restaurantDetails/
+     │            │ └─────────────────┤ About.js       *(Header with restaurant information)*
+     │            │                   │ MenuItems.js   *(Menu options list)*
+     │            │                   │ OrderItem.js   *(Item name and price to order list)*
+     │            │                   │ ViewCart.js    *(Order list and buttons)*
+     │            │                   │ viewCart/
+     │            │                   │ └────────┤ addOrderToFireBase.js *(Save order in BackEnd DB)*
+     │            │                   │          │ CheckOutButton.js     *(Button to check out)*
+     │            │                   │          │ LoadingScreen.js   *(Loading animation)*
+     │            │                   │          │ ViewCartButton    *(BUtton to view cart)*
+     │            │                   
+     │            │ DividerLine.js    *(Component to draw a line)*
+     │ redux/  
+     │ └──────┤ store.js     *(Redux store)*
+     │        │ reducers/             
+     │          └────────┤ cartReducer.js  *(Reducer)*
+     │                   │ index.js    *(Reducer configuration)*
+     │
+     │ assets/    *(Any other resource such images, animations or list)*
       
 
 ## Files:
