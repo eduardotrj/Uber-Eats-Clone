@@ -1,5 +1,5 @@
 
-const YELP_API_KEY = "UPig85LAx-ZQh7SDBw_eHvvQVIw9Bnz8bSF7yjeIMw7YF2R34FH_EvrsReTSptOZqxR5ko5lgdSqen3AqJA-5UATUf-hBGQTKS2NyLiDv454r0S_D0fV2Ixuqh70YnYx"
+const YELP_API_KEY = "UPig85LAx-ZQh7SDBw_eHvvQVIw9Bnz8bSF7yjeIMw7GH2R34FH_EvrsReTSptOZqxR5ko5lgdSqen3AqJA-5UATNf-hBGQTKS2NyLiDv454r0S_D0fV2Ixuqh70YnYx"
 
 
 export const getRestaurantsFromYelp = (setRestaurantData,activeTab,city) => {
